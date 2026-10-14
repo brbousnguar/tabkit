@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "tabkit",
+  "version": "0.1.0",
+  "description": "Lets your local tabkit MCP server read Jira and Confluence with the session you are logged in with in Chrome.",
+  "minimum_chrome_version": "116",
+  "permissions": ["scripting", "storage", "alarms"],
+  "host_permissions": ["https://*.atlassian.net/*", "http://127.0.0.1/*"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "tabkit",
+    "default_popup": "popup.html"
+  }
+}

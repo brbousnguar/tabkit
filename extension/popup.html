@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>tabkit</title>
+    <style>
+      :root { color-scheme: light dark; --muted: #f4f5f7; --text: #172b4d; }
+      @media (prefers-color-scheme: dark) { :root { --muted: #2c333a; --text: #dee4ea; } }
+      body { width: 320px; margin: 12px; font: 13px system-ui, sans-serif; color: var(--text); }
+      label { display: block; margin-top: 10px; font-weight: 600; }
+      input { width: 100%; box-sizing: border-box; margin-top: 3px; padding: 5px 6px; }
+      button { margin-top: 12px; padding: 5px 14px; }
+      #status { margin-top: 12px; padding: 8px; border-radius: 4px; background: var(--muted); white-space: pre-wrap; }
+    </style>
+  </head>
+  <body>
+    <strong>tabkit</strong>
+    <label for="site">Atlassian site</label>
+    <input id="site" type="url" placeholder="https://your-domain.atlassian.net" />
+    <label for="token">Pairing token</label>
+    <input id="token" type="password" placeholder="Output of: npm run pairing-token" autocomplete="off" />
+    <label for="ports">Ports</label>
+    <input id="ports" placeholder="17321-17330" />
+    <button id="save">Save</button>
+    <div id="status"></div>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
