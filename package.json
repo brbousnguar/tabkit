@@ -1,0 +1,33 @@
+{
+  "name": "tabkit",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "MCP server for Jira and Confluence that uses the session you are logged in with in Chrome, through a small extension. No API token.",
+  "license": "Apache-2.0",
+  "author": "Brahim Bousnguar",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brbousnguar/tabkit.git"
+  },
+  "homepage": "https://heybrahim.com/projects/tabkit.html",
+  "bin": {
+    "tabkit": "./src/index.js"
+  },
+  "scripts": {
+    "start": "node ./src/index.js",
+    "pairing-token": "node ./scripts/pairing-token.js",
+    "test": "node --test test/*.test.js",
+    "test:chrome": "node test/chrome.e2e.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "ws": "^8.22.0"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.63.0"
+  }
+}
